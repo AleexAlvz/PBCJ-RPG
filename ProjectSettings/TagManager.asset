@@ -13,8 +13,8 @@ TagManager:
   - Water
   - UI
   - Bloqueio
-  - 
-  - 
+  - Consumivel
+  - Inimigos
   - 
   - 
   - 
@@ -42,6 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Caracteres
+  - name: Piso
     uniqueID: 3031457147
+    locked: 0
+  - name: Objeto
+    uniqueID: 955012723
+    locked: 0
+  - name: "\xC1gua"
+    uniqueID: 136694631
+    locked: 0
+  - name: Caractere
+    uniqueID: 1267580451
     locked: 0
