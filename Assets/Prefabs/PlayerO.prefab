@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 453998840719669165}
   - component: {fileID: 453998840719669166}
   - component: {fileID: 3365486271900758248}
+  - component: {fileID: -150775556810459145}
   m_Layer: 6
   m_Name: PlayerO
   m_TagString: Player
@@ -165,3 +166,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VelocidadeMovimento: 3
+--- !u!114 &-150775556810459145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453998840719669162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d3e4fd8dcf2154ebaf65ad4d7eae42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PontosDano: 0
+  MaxPontosDano: 100
