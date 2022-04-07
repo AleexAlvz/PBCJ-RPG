@@ -2,8 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script responsavel pelas caracteristicas do player, como manusear colisoes e gerenciar sua vida, healthbar e itens pegos.
+/// </summary>
 public class Player : Caractere
 {
+    public HealthBar healthBarPrefab;  //Referencia do prefab HealthBar
+    HealthBar healthBar;
+
+    private void Start()
+    {
+        healthBar.caractere = this;
+        pontosDano.valor = InicioPontosDano;
+        healthBar = Instantiate(healthBarPrefab);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,25 +24,30 @@ public class Player : Caractere
             Item danoObjeto = collision.gameObject.GetComponent<Consumable>().item;
             if (danoObjeto!=null)
             {
-                print("Acertou: " + danoObjeto.NomeObjeto);
+                bool DeveDesaparecer = false;
                 switch (danoObjeto.tipoItem)
                 {
                     case Item.TipoItem.MOEDA:
+                        DeveDesaparecer = true;
                         break;
                     case Item.TipoItem.HEALTH:
-                        AjusteDanoObjeto(danoObjeto.quantidade);
+                        DeveDesaparecer = AjusteDanoObjeto(danoObjeto.quantidade);
                         break;
                     default:
                         break;
                 }
-                collision.gameObject.SetActive(false);
+                if (DeveDesaparecer) collision.gameObject.SetActive(false);
             }
         }
     }
 
-    private void AjusteDanoObjeto(int quantidade)
+    private bool AjusteDanoObjeto(int quantidade)
     {
-        PontosDano = PontosDano + quantidade;
-        print("Ajuste por: " + quantidade + ". Novo valor: " + PontosDano);
+        if (pontosDano.valor < MaxPontosDano)
+        {
+            pontosDano.valor = pontosDano.valor + quantidade;
+            return true;
+        }
+        else return false;
     }
 }

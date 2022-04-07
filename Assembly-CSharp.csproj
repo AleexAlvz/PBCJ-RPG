@@ -56,12 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ScriptableObjects\Item.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviours\Player.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\MovimentaPlayer.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\ArredondaPosCamera.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PontosDano.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\Caractere.cs" />
-    <Compile Include="Assets\Scripts\Monobehaviours\Player.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\Item.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\Consumable.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviours\HealthBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
