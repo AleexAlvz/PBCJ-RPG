@@ -7,14 +7,17 @@ using UnityEngine;
 /// </summary>
 public class Player : Caractere
 {
+    public Inventario inventarioPrefab; //Aramazena o prefab do inventario do player
+    Inventario inventario; //Armazena o inventario instanciado
     public HealthBar healthBarPrefab;  //Referencia do prefab HealthBar
-    HealthBar healthBar;
+    HealthBar healthBar; //Armazena a healthBar instanciada
 
     private void Start()
     {
-        healthBar.caractere = this;
+        inventario = Instantiate(inventarioPrefab);
         pontosDano.valor = InicioPontosDano;
         healthBar = Instantiate(healthBarPrefab);
+        healthBar.caractere = this;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,7 +31,7 @@ public class Player : Caractere
                 switch (danoObjeto.tipoItem)
                 {
                     case Item.TipoItem.MOEDA:
-                        DeveDesaparecer = true;
+                        DeveDesaparecer = inventario.AddItem(danoObjeto);
                         break;
                     case Item.TipoItem.HEALTH:
                         DeveDesaparecer = AjusteDanoObjeto(danoObjeto.quantidade);

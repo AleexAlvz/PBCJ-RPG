@@ -58,12 +58,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScriptableObjects\Item.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\Player.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviours\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\MovimentaPlayer.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\ArredondaPosCamera.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PontosDano.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\Caractere.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\Consumable.cs" />
-    <Compile Include="Assets\Scripts\Monobehaviours\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviours\Slot.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviours\Inventario.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
