@@ -7,8 +7,15 @@ using UnityEngine;
 /// </summary>
 public abstract class Caractere : MonoBehaviour
 {
-    public PontosDano pontosDano; // Tipo que armazena o valor do objeto script
     public float InicioPontosDano; //Quantidade inicial de pontos dano do caractere
     public float MaxPontosDano; //Quantidade máxima de pontos dano do caractere
 
+    public abstract void ResetCaractere();
+
+    public abstract IEnumerator DanoCaractere(int dano, float intervalo);
+   
+    public virtual void KillCaractere()
+    {
+        Destroy(gameObject);
+    }
 }

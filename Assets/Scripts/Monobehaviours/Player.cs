@@ -11,6 +11,7 @@ public class Player : Caractere
     Inventario inventario; //Armazena o inventario instanciado
     public HealthBar healthBarPrefab;  //Referencia do prefab HealthBar
     HealthBar healthBar; //Armazena a healthBar instanciada
+    public PontosDano pontosDano; // Tem o valor da vida do objeto
 
     private void Start()
     {
@@ -18,6 +19,39 @@ public class Player : Caractere
         pontosDano.valor = InicioPontosDano;
         healthBar = Instantiate(healthBarPrefab);
         healthBar.caractere = this;
+    }
+
+    public override void ResetCaractere()
+    {
+        inventario = Instantiate(inventarioPrefab);
+        healthBar = Instantiate(healthBarPrefab);
+        healthBar.caractere = this;
+        pontosDano.valor = InicioPontosDano;
+    }
+
+    public override void KillCaractere()
+    {
+        base.KillCaractere();
+        Destroy(healthBar.gameObject);
+        Destroy(inventario.gameObject);
+    }
+
+    public override IEnumerator DanoCaractere(int dano, float intervalo)
+    {
+        while (true)
+        {
+            pontosDano.valor = pontosDano.valor - dano;
+            if (pontosDano.valor <= float.Epsilon)
+            {
+                KillCaractere();
+                break;
+            }
+            if (intervalo > float.Epsilon)
+            {
+                yield return new WaitForSeconds(intervalo);
+            }
+            else break;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

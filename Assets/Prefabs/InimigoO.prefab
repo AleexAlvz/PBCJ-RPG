@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7215114078261321566}
   - component: {fileID: 7215114078261321561}
   - component: {fileID: 7215114078261321560}
+  - component: {fileID: 4971070178026306220}
   m_Layer: 8
   m_Name: InimigoO
   m_TagString: Inimigo
@@ -97,18 +98,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.012704074, y: -0.0076224804}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.46875, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.45626485, y: 0.55789757}
   m_EdgeRadius: 0
 --- !u!50 &7215114078261321560
 Rigidbody2D:
@@ -131,3 +132,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4971070178026306220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7215114078261321565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe09c10880398b459d4a1531e3e1dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InicioPontosDano: 2
+  MaxPontosDano: 2
+  forcaDano: 1
