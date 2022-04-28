@@ -10,9 +10,10 @@ public class MovimentaPlayer : MonoBehaviour
 
     Rigidbody2D rb2D; //Guarda o componente CorpoRigido do player.
     Animator animator; //Guarda o componente Animator do player
-    string estadoAnimacao = "EstadoAnimacao"; //guarda o nome do parametro de animacao
+    // string estadoAnimacao = "EstadoAnimacao"; //guarda o nome do parametro de animacao // Desnecessario com a blend tree
 
 
+    /*              // Desnecessario pela blend tree
     enum EstadosCaractere
     {
         idle = 0,
@@ -21,6 +22,7 @@ public class MovimentaPlayer : MonoBehaviour
         andaNorte = 3,
         andaSul = 4
     }
+    */
 
     // Start is called before the first frame update
     void Start()
@@ -35,13 +37,13 @@ public class MovimentaPlayer : MonoBehaviour
         UpdateEstado();
     }
 
-    //Responsável por deixar o movimento mais suave
+    //Responsï¿½vel por deixar o movimento mais suave
     private void FixedUpdate()
     {
         MoveCaractere();
     }
 
-    //Atualiza a dinâmica do movimento.
+    //Atualiza a dinï¿½mica do movimento.
     private void MoveCaractere()
     {
         Movimento.x = Input.GetAxisRaw("Horizontal");
@@ -52,6 +54,20 @@ public class MovimentaPlayer : MonoBehaviour
 
     private void UpdateEstado()
     {
+        if (Mathf.Approximately(Movimento.x, 0) && (Mathf.Approximately(Movimento.y, 0)))
+        {
+            animator.SetBool("Caminhando", false);
+        }
+        else
+        {
+            animator.SetBool("Caminhando", true);
+        }
+    }
+
+    /*
+    private void UpdateEstado()
+    {
+        
         if (Movimento.x > 0)
         {
             animator.SetInteger(estadoAnimacao, (int)EstadosCaractere.andaLeste);
@@ -72,6 +88,8 @@ public class MovimentaPlayer : MonoBehaviour
         {
             animator.SetInteger(estadoAnimacao, (int)EstadosCaractere.idle);
         }
+        
     }
+    */
 
 }

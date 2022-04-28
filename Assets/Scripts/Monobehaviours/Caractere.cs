@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Classe abstrata com caracteristicas básicas de todo caractere, na qual todos caracteres devem herdar.
+/// Classe abstrata com caracteristicas bï¿½sicas de todo caractere, na qual todos caracteres devem herdar.
 /// </summary>
 public abstract class Caractere : MonoBehaviour
 {
     public float InicioPontosDano; //Quantidade inicial de pontos dano do caractere
-    public float MaxPontosDano; //Quantidade máxima de pontos dano do caractere
+    public float MaxPontosDano; //Quantidade mï¿½xima de pontos dano do caractere
 
     public abstract void ResetCaractere();
+
+    public virtual IEnumerator FlickerCaractere()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
 
     public abstract IEnumerator DanoCaractere(int dano, float intervalo);
    

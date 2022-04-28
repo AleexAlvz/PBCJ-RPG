@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 453998840719669166}
   - component: {fileID: 3365486271900758248}
   - component: {fileID: -150775556810459145}
+  - component: {fileID: -4366028894018837512}
   m_Layer: 6
   m_Name: PlayerO
   m_TagString: Player
@@ -178,8 +179,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d3e4fd8dcf2154ebaf65ad4d7eae42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pontosDano: {fileID: 11400000, guid: f214e48d1c23c834b8f1c72ce0a4ef2e, type: 2}
   InicioPontosDano: 5
   MaxPontosDano: 10
   inventarioPrefab: {fileID: 6485561725510263304, guid: c34c75e706eb31f4f89bcfa105875073, type: 3}
   healthBarPrefab: {fileID: 6947755290081577459, guid: 1e2e478084a2e14498b37f2f165ff627, type: 3}
+  pontosDano: {fileID: 11400000, guid: f214e48d1c23c834b8f1c72ce0a4ef2e, type: 2}
+--- !u!114 &-4366028894018837512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453998840719669162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e20091d44315d4db2654dfb942967a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MunicaoPrefab: {fileID: 5082604008771181758, guid: d29ec43f99639c44f89a2ac3e8e26fa3, type: 3}
+  TamanhoPool: 7
+  VelocidadeArma: 2

@@ -4,8 +4,8 @@ using UnityEngine;
 public class Inimigo : Caractere
 {
 
-    float pontosVida;   //Saúde que o inimigo possui
-    public int forcaDano; //A quantidade de dano que o inimigo causará
+    float pontosVida;   //Saï¿½de que o inimigo possui
+    public int forcaDano; //A quantidade de dano que o inimigo causarï¿½
 
     Coroutine danoCoroutine;
 
@@ -54,6 +54,7 @@ public class Inimigo : Caractere
     {
         while (true)
         {
+            StartCoroutine(FlickerCaractere());
             pontosVida = pontosVida - dano;
             if (pontosVida <= float.Epsilon)
             {
