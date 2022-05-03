@@ -1,10 +1,14 @@
 using UnityEngine;
 
+/// <summary>
+/// Classe responsavel pelo trigger da municao
+/// </summary>
 public class Municao : MonoBehaviour
 {
 
     public int DanoCausado;     // Poder de dano da municao
 
+    //Valida colisao da municao com o caractere
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider is BoxCollider2D)

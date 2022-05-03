@@ -13,6 +13,7 @@ public class Player : Caractere
     HealthBar healthBar; //Armazena a healthBar instanciada
     public PontosDano pontosDano; // Tem o valor da vida do objeto
 
+    //Ao iniciar o player, configura seus componentes
     private void Start()
     {
         inventario = Instantiate(inventarioPrefab);
@@ -21,6 +22,7 @@ public class Player : Caractere
         healthBar.caractere = this;
     }
 
+    //Reseta o player, sua vida e seu inventario
     public override void ResetCaractere()
     {
         inventario = Instantiate(inventarioPrefab);
@@ -29,6 +31,7 @@ public class Player : Caractere
         pontosDano.valor = InicioPontosDano;
     }
 
+    //Mata o player, destruindo seu gameObject
     public override void KillCaractere()
     {
         base.KillCaractere();
@@ -36,6 +39,7 @@ public class Player : Caractere
         Destroy(inventario.gameObject);
     }
 
+    //Responsavel por dar o dano no player, dando uma animacaozinha breve
     public override IEnumerator DanoCaractere(int dano, float intervalo)
     {
         while (true)
@@ -55,6 +59,7 @@ public class Player : Caractere
         }
     }
 
+    //Reconhece trigger de contato com coletaveis, tratando a coleta para cada caso.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Coletavel"))
@@ -79,6 +84,7 @@ public class Player : Caractere
         }
     }
 
+    //Ajusta a vida do usuario com coletaveis de saúde
     private bool AjusteDanoObjeto(int quantidade)
     {
         if (pontosDano.valor < MaxPontosDano)

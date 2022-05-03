@@ -44,6 +44,7 @@ public class Perambular : MonoBehaviour
         }
     }
 
+    //Gera movimentacao para o caractere.
     public IEnumerator RotinaPerambular()
     {
         while (true)
@@ -58,6 +59,7 @@ public class Perambular : MonoBehaviour
         }
     }
 
+    //Calcula proximo ponto ao qual o caractere ira caminhar
     private void EscolheNovoPontoFinal()
     {
         _anguloAtual += Random.Range(0, 360);
@@ -71,6 +73,7 @@ public class Perambular : MonoBehaviour
         return new Vector3(Mathf.Cos(anguloEntradaRadianos), Mathf.Sin(anguloEntradaRadianos), 0);
     }
 
+    //Movimentacao do caractere
     public IEnumerator Mover(Rigidbody2D rbParaMover, float velocidade)
     {
         float distanciaFaltante = (transform.position - _posicaoFinal).sqrMagnitude;
@@ -92,6 +95,7 @@ public class Perambular : MonoBehaviour
         _animator.SetBool("Caminhando", false);
     }
 
+    //Trigger de colisao com o player para criar perseguicao.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && PerseguePlayer)
@@ -105,7 +109,7 @@ public class Perambular : MonoBehaviour
             _moverCoroutine = StartCoroutine(Mover(_rb2D, _velocidadeCorrente));
         }
     }
-
+    //Quando sai do trigger, muda animação e velocidade do caractere
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

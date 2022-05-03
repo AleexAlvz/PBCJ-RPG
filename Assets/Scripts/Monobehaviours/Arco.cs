@@ -1,9 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Classe responsavel pela arma ARCO, calculando sua trajetoria.
+/// </summary>
 public class Arco : MonoBehaviour
 {
 
+    //Calcula a trajetoria do tiro do arco
     public IEnumerator ArcoTrajetoria(Vector3 destino, float duracao)
     {
         var posicaoInicial = transform.position;

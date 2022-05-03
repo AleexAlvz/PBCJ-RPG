@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Define o ponto spawn do caractere
+/// </summary>
 public class PontoSpawn : MonoBehaviour
 {
 
-    public GameObject prefabParaSpawn;
+    public GameObject prefabParaSpawn; //Prefab para spawnar na cena
 
-    public float intervaloRepeticao;
+    public float intervaloRepeticao; //Intervalo de repeticao para spawn (no caso do inimigo)
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,7 @@ public class PontoSpawn : MonoBehaviour
         }
     }
 
+    //Instancia o prefab no local marcado
     public GameObject SpawnO()
     {
         if (prefabParaSpawn != null)

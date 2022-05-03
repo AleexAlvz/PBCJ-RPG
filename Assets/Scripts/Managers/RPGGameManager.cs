@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controla o jogo, player, inimigos e qualquer caractere.
+/// </summary>
 public class RPGGameManager : MonoBehaviour
 {
 
-    public static RPGGameManager instanciaCompartilhada = null;
-    public RPGCameraManager cameraManager;
+    public static RPGGameManager instanciaCompartilhada = null; //Manager da cena
+    public RPGCameraManager cameraManager; //Manager da camera do player
 
-    public PontoSpawn playerPontoSpawn;
+    public PontoSpawn playerPontoSpawn; //Local onde o player vai spawnar
 
 
+    //Garante que a instancia é unica, tornando o script em um companion object
     private void Awake()
     {
         if (instanciaCompartilhada != null && instanciaCompartilhada != this)
@@ -27,11 +31,13 @@ public class RPGGameManager : MonoBehaviour
         SetupScene();   
     }
 
+    //Configura inicialmente a cena
     public void SetupScene()
     {
         SpawnPlayer();
     }
 
+    //Spawna o player na cena
     public void SpawnPlayer()
     {
         if (playerPontoSpawn != null)

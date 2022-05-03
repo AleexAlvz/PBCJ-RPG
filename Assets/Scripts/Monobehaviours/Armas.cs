@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Classe responsavel por controlar e animar a arma
+/// </summary>
 [RequireComponent(typeof(Animator))]
 public class Armas : MonoBehaviour
 {
@@ -21,7 +24,7 @@ public class Armas : MonoBehaviour
     private float _slopePositivo;
     private float _slopeNegativo;
 
-    enum Quadrante
+    enum Quadrante //Quadrante no qual a arma dispara
     {
         Leste,
         Sul,
@@ -29,6 +32,7 @@ public class Armas : MonoBehaviour
         Norte
     }
 
+    //adiciona municao pro player
     public void Awake()
     {
         if (_municaoPool == null)
@@ -57,6 +61,7 @@ public class Armas : MonoBehaviour
         _slopeNegativo = PegaSlope(acimaEsquerda, abaixoDireita);
     }
 
+    //Direciona o trajetil da arma para acima slope positivo
     private bool AcimaSlopePositivo(Vector2 posicaoEntrada)
     {
         Vector2 posicaoPlayer = gameObject.transform.position;
@@ -66,6 +71,7 @@ public class Armas : MonoBehaviour
         return entradaInterseccao > interseccaoY;
     }
 
+    //Direciona o trajetil da arma para acima slope negativo
     private bool AcimaSlopeNegativo(Vector2 posicaoEntrada)
     {
         Vector2 posicaoPlayer = gameObject.transform.position;
@@ -75,6 +81,7 @@ public class Armas : MonoBehaviour
         return entradaInterseccao > interseccaoY;
     }
 
+    //Pega o quadrante correto para disparar o trajetil
     private Quadrante PegaQuadrante()
     {
         Vector2 posicaoMouse = Input.mousePosition;
@@ -99,6 +106,7 @@ public class Armas : MonoBehaviour
         }
     }
 
+    //Atualiza o estado da animação da arma
     private void UpdateEstado()
     {
         if (_atirando)
@@ -146,11 +154,13 @@ public class Armas : MonoBehaviour
         UpdateEstado();
     }
 
+    //Pega o slope de acordo com a posicao passada
     private float PegaSlope(Vector2 ponto1, Vector2 ponto2)
     {
         return (ponto2.y - ponto1.y)/(ponto2.x - ponto1.x);
     }
 
+    //Faz o spawn da municao na cena
     public GameObject SpawnMunicao(Vector3 posicao)
     {
         foreach (var municao in _municaoPool)
@@ -166,6 +176,7 @@ public class Armas : MonoBehaviour
         return null;
     }
 
+    //Responsavel por capturar o disparo da arma
     private void DisparaMunicao()
     {
         Vector3 posicaoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);

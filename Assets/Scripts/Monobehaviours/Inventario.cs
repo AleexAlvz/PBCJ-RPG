@@ -37,6 +37,7 @@ public class Inventario : MonoBehaviour
         }
     }
 
+    //Adiciona um item no inventario
     public bool AddItem(Item item)
     {
         for (int i = 0; i<itens.Length; i++)

@@ -1,6 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Classe do inimigo, herdando um caractere.
+/// </summary>
 public class Inimigo : Caractere
 {
 
@@ -21,6 +24,7 @@ public class Inimigo : Caractere
         
     }
 
+    //Metodo chamado quando há colisao entre caracteres, adicionando dano ao player
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -33,6 +37,7 @@ public class Inimigo : Caractere
         }
     }
 
+    //Metodo ao sair da colisao, parando de dar dano ao player
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -45,11 +50,13 @@ public class Inimigo : Caractere
         }
     }
 
+    //Quando inimigo é criado, o onEnable é chamado e reseta a vida do inimigo.
     private void OnEnable()
     {
         ResetCaractere();
     }
 
+    //Dá dano no player, e caso chegue na vida com valor 0, mata o player
     public override IEnumerator DanoCaractere(int dano, float intervalo)
     {
         while (true)
@@ -69,6 +76,7 @@ public class Inimigo : Caractere
         }
     }
 
+    //reseta a vida do caractere.
     public override void ResetCaractere()
     {
         pontosVida = InicioPontosDano;
