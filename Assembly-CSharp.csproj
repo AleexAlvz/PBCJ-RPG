@@ -74,6 +74,10 @@
     <Compile Include="Assets\Scripts\Managers\RPGCameraManager.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\Consumable.cs" />
     <Compile Include="Assets\Scripts\Monobehaviours\Perambular.cs" />
+    <Compile Include="Assets\Scripts\Managers\ButtonManager.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviours\TelaCreditos.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviours\DialogMae.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviours\FimFase1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
