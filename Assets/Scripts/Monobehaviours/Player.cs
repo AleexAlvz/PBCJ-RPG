@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Script responsavel pelas caracteristicas do player, como manusear colisoes e gerenciar sua vida, healthbar e itens pegos.
@@ -37,6 +37,7 @@ public class Player : Caractere
         base.KillCaractere();
         Destroy(healthBar.gameObject);
         Destroy(inventario.gameObject);
+        SceneManager.LoadScene("TelaDerrota");
     }
 
     //Responsavel por dar o dano no player, dando uma animacaozinha breve
@@ -75,6 +76,18 @@ public class Player : Caractere
                         break;
                     case Item.TipoItem.HEALTH:
                         DeveDesaparecer = AjusteDanoObjeto(danoObjeto.quantidade);
+                        break;
+                    case Item.TipoItem.COLAR:
+                        DeveDesaparecer = inventario.AddItem(danoObjeto);
+                        break;
+                    case Item.TipoItem.CHAVE:
+                        DeveDesaparecer = inventario.AddItem(danoObjeto);
+                        break;
+                    case Item.TipoItem.PERGAMINHO:
+                        DeveDesaparecer = inventario.AddItem(danoObjeto);
+                        break;
+                    case Item.TipoItem.TABUA:
+                        DeveDesaparecer = inventario.AddItem(danoObjeto);
                         break;
                     default:
                         break;

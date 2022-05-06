@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Classe do inimigo, herdando um caractere.
@@ -7,22 +8,12 @@ using UnityEngine;
 public class Inimigo : Caractere
 {
 
+    public bool bossFinal;
+
     float pontosVida;   //Sa�de que o inimigo possui
     public int forcaDano; //A quantidade de dano que o inimigo causar�
 
     Coroutine danoCoroutine;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     //Metodo chamado quando há colisao entre caracteres, adicionando dano ao player
     void OnCollisionEnter2D(Collision2D collision)
@@ -66,6 +57,10 @@ public class Inimigo : Caractere
             if (pontosVida <= float.Epsilon)
             {
                 KillCaractere();
+                if (bossFinal)
+                {
+                    SceneManager.LoadScene("TelaVitoria");
+                }
                 break;
             }
             if (intervalo > float.Epsilon)
@@ -81,5 +76,4 @@ public class Inimigo : Caractere
     {
         pontosVida = InicioPontosDano;
     }
-
 }

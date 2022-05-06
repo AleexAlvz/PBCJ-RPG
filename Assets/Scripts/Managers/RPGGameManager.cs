@@ -45,6 +45,7 @@ public class RPGGameManager : MonoBehaviour
             GameObject player = playerPontoSpawn.SpawnO();
             cameraManager.virtualCamera.Follow = player.transform;
         }
+        else print("helou");
     }
 
     // Update is called once per frame

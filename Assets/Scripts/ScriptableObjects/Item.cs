@@ -17,7 +17,11 @@ public class Item : ScriptableObject
     public enum TipoItem //Enum dos tipos de itens utilizados no lab
     {
         MOEDA, 
-        HEALTH
+        HEALTH,
+        COLAR,
+        CHAVE,
+        PERGAMINHO,
+        TABUA
     }
 
     public TipoItem tipoItem; //Armazena o tipo do do objeto script item

@@ -440,36 +440,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Integrantes do grupo
-
-
-    Mohammad Massoud RA:11201921292
-
-    Alex Alves
-    Carvalho da Costa RA:11201920139
-
-    Samuel Brito da Silva RA: 11201810515
-
-    Pedro
-    Tersetti Freidinger, 11201810093
-
-    Giovanna Nogueira RA: 11201921328
-
-    Arthur
-    Mesquita RA:11201920999
-
-    Guilherme Alberto P. S. Mendieta RA: 11201721130
-
-
-    Background
-    da Home: https://i.pinimg.com/originals/08/21/49/082149f69530892bbe2f02aa4d545973.jpg
-
-
-    Musica
-    dos creditos: https://www.youtube.com/watch?v=v2jir8opKlc
-
-    Musica da Home:
-    https://www.youtube.com/watch?v=nqye02H_H6I'
+  m_Text: "Integrantes do grupo\n\nMohammad Massoud RA:11201921292\nAlex Alves Carvalho
+    da Costa RA:11201920139\nSamuel Brito da Silva RA: 11201810515\nPedro Tersetti
+    Freidinger, 11201810093\nGiovanna Nogueira RA: 11201921328\nArthur Mesquita RA:11201920999\nGuilherme
+    Alberto P. S. Mendieta RA: 11201721130\n\nBackground da Home: https://i.pinimg.com/originals/08/21/49/082149f69530892bbe2f02aa4d545973.jpg\nMusica
+    dos creditos: https://www.youtube.com/watch?v=v2jir8opKlc\nMusica da natureza:
+    https://www.youtube.com/watch?v=nqye02H_H6I\nsprite galinha: https://pixelplant.itch.io/chicken-sprite-sheet\nMae
+    do personagem: https://shubibubi.itch.io/cozy-people\nwooden GUI: https://nariktheartist.itch.io/pixel-art-wooden-gui\nIcons
+    de fantasia: https://cheekyinkling.itch.io/shikashis-fantasy-icons-pack\ntilemap
+    fase2 e fase3: https://cainos.itch.io/pixel-art-top-down-basic\nEfeito vit\xF3ria:
+    https://www.youtube.com/watch?v=7w4sAK_eMSY\nEfeito derrota: https://www.youtube.com/watch?v=wJpCFIUG0sQ\n\n"
 --- !u!222 &1430160617
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lab5_RPG_Setup.unity
     guid: d273a6b9c29faba47b99a6e9029f8760
+  - enabled: 1
+    path: Assets/Scenes/Fase3.unity
+    guid: 6ac59bbde51a5dc43a7c4376e5164dcd
+  - enabled: 1
+    path: Assets/Scenes/TelaDerrota.unity
+    guid: b2d0be7531c78964bb52203a148598a5
+  - enabled: 1
+    path: Assets/Scenes/TelaVitoria.unity
+    guid: e5194c82ea3361a40a29e68ba98448d1
   m_configObjects: {}
