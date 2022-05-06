@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InicioPontosDano: 2
   MaxPontosDano: 2
+  bossFinal: 0
   forcaDano: 1
 --- !u!58 &6044110870872731900
 CircleCollider2D:
@@ -200,4 +201,4 @@ MonoBehaviour:
   VelocidadePerseguicao: 1.4
   VelocidadePerambular: 0.8
   IntervaloMudancaDirecao: 3
-  PerseguePlayer: 0
+  PerseguePlayer: 1

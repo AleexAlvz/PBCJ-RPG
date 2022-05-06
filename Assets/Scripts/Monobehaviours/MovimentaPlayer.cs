@@ -62,6 +62,8 @@ public class MovimentaPlayer : MonoBehaviour
         {
             animator.SetBool("Caminhando", true);
         }
+        animator.SetFloat("DirX", Movimento.x);
+        animator.SetFloat("DirY", Movimento.y);
     }
 
     /*
