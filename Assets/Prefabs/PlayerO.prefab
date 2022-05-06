@@ -199,3 +199,4 @@ MonoBehaviour:
   MunicaoPrefab: {fileID: 5082604008771181758, guid: d29ec43f99639c44f89a2ac3e8e26fa3, type: 3}
   TamanhoPool: 7
   VelocidadeArma: 2
+  animator: {fileID: 0}
