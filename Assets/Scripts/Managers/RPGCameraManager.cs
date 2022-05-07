@@ -12,7 +12,7 @@ public class RPGCameraManager : MonoBehaviour
     [HideInInspector]
     public CinemachineVirtualCamera virtualCamera; //Recebe a camera virtual para o controle dela.
 
-    //Garante instancia unica para o script
+    /*Garante instancia unica para o script*/
     private void Awake()
     {
         if( instanciaCompartilhada != null && instanciaCompartilhada != this)

@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// esse class controla personagem mae do jogo
+/// </summary>
 public class DialogMae : MonoBehaviour
 {
 

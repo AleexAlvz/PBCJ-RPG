@@ -6,5 +6,5 @@ using UnityEngine.UI;
 /// </summary>
 public class Slot : MonoBehaviour
 {
-    public Text QuantidadeTexto;
+    public Text QuantidadeTexto; // armazena quantidade de texto 
 }

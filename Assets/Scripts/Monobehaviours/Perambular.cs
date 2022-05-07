@@ -5,6 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(Animator))]
+
+///summary 
+///controla o Perambular no jogo
+/// summary///
 public class Perambular : MonoBehaviour
 {
 

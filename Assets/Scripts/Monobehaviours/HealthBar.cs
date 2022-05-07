@@ -11,7 +11,7 @@ public class HealthBar : MonoBehaviour
     public Player caractere; //Armazena o caracter Player que esse health bar representa.
     public Image medidorImagem; //Armazena a imagem que representa a vida do personagem.
     public Text pdText; //Armazena o texto que indica a quantidade de vida que o usuario tem, de 0 a 100
-    float maxPontosDano;
+    float maxPontosDano; //armazena max pontos Dano
 
     // Start is called before the first frame update
     void Start()

@@ -7,7 +7,7 @@ using UnityEngine;
 public class Arco : MonoBehaviour
 {
 
-    //Calcula a trajetoria do tiro do arco
+    /*Calcula a trajetoria do tiro do arco*/
     public IEnumerator ArcoTrajetoria(Vector3 destino, float duracao)
     {
         var posicaoInicial = transform.position;
@@ -21,17 +21,5 @@ public class Arco : MonoBehaviour
             yield return null;
         }
         gameObject.SetActive(false);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -19,7 +19,7 @@ public class Armas : MonoBehaviour
     [HideInInspector]
     public Animator animator;
 
-    private Camera _cameraLocal;
+    private Camera _cameraLocal;  // local da camera 
 
     private float _slopePositivo;
     private float _slopeNegativo;
@@ -32,7 +32,7 @@ public class Armas : MonoBehaviour
         Norte
     }
 
-    //adiciona municao pro player
+    /*adiciona municao pro player*/
     public void Awake()
     {
         if (_municaoPool == null)
@@ -47,7 +47,7 @@ public class Armas : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+    // *Start is called before the first frame update*/
     void Start()
     {
         animator = GetComponent<Animator>();

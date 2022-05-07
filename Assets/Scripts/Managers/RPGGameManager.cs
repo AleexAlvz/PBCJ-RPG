@@ -48,9 +48,4 @@ public class RPGGameManager : MonoBehaviour
         else print("helou");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

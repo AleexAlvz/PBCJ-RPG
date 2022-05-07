@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 /// <summary>
 /// Objeto script que armazena os valores de um item no jogo e suas caracteristicas.
 /// </summary>

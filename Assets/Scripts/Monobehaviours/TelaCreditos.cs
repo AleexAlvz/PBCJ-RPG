@@ -9,7 +9,6 @@ public class TelaCreditos : MonoBehaviour
 {
     public float Speed; //variavel indica a velocidade da transformacao da posicao 
     public int Fps; //variavel indica a taxa de atualizacao da minha tela
-
     private float _alturaTexto; // Altura do objeto de texto
 
     // Start is called before the first frame update

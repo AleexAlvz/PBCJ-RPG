@@ -8,14 +8,13 @@ using UnityEngine.SceneManagement;
 public class Inimigo : Caractere
 {
 
-    public bool bossFinal;
-
+    public bool bossFinal; // chegar ate inimigo final 
     float pontosVida;   //Sa�de que o inimigo possui
     public int forcaDano; //A quantidade de dano que o inimigo causar�
 
     Coroutine danoCoroutine;
 
-    //Metodo chamado quando há colisao entre caracteres, adicionando dano ao player
+    /*Metodo chamado quando há colisao entre caracteres, adicionando dano ao player*/
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -28,7 +27,7 @@ public class Inimigo : Caractere
         }
     }
 
-    //Metodo ao sair da colisao, parando de dar dano ao player
+    /*Metodo ao sair da colisao, parando de dar dano ao player*/
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -41,13 +40,13 @@ public class Inimigo : Caractere
         }
     }
 
-    //Quando inimigo é criado, o onEnable é chamado e reseta a vida do inimigo.
+    /*Quando inimigo é criado, o onEnable é chamado e reseta a vida do inimigo.*/
     private void OnEnable()
     {
         ResetCaractere();
     }
 
-    //Dá dano no player, e caso chegue na vida com valor 0, mata o player
+    /*Dá dano no player, e caso chegue na vida com valor 0, mata o player*/
     public override IEnumerator DanoCaractere(int dano, float intervalo)
     {
         while (true)
@@ -71,7 +70,7 @@ public class Inimigo : Caractere
         }
     }
 
-    //reseta a vida do caractere.
+    /*reseta a vida do caractere.*/
     public override void ResetCaractere()
     {
         pontosVida = InicioPontosDano;

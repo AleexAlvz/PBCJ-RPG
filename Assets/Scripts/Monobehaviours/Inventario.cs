@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// controla Inventario do jogador
+/// </summary>
 public class Inventario : MonoBehaviour
 {
     public GameObject slotPrefab;  //Objeto prefab do slot.
@@ -9,19 +11,19 @@ public class Inventario : MonoBehaviour
     Item[] itens = new Item[numSlot]; //Array de itens
     GameObject[] slots = new GameObject[numSlot]; //Array de slots
 
-    // Start is called before the first frame update
+    /* Start is called before the first frame update*/
     void Start()
     {
         CriaSlots();
     }
 
-    // Update is called once per frame
+    /* Update is called once per frame*/
     void Update()
     {
         
     }
 
-    //Cria a quantidade certa de slots, de acordo com a variavel numSlot.
+    /*Cria a quantidade certa de slots, de acordo com a variavel numSlot.*/
     public void CriaSlots()
     {
         if (slotPrefab != null) //Verifica se o slotPrefab foi definido
@@ -37,7 +39,7 @@ public class Inventario : MonoBehaviour
         }
     }
 
-    //Adiciona um item no inventario
+    /*Adiciona um item no inventario*/
     public bool AddItem(Item item)
     {
         for (int i = 0; i<itens.Length; i++)
