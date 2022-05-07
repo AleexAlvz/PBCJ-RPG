@@ -14,7 +14,7 @@ public class RPGGameManager : MonoBehaviour
     public PontoSpawn playerPontoSpawn; //Local onde o player vai spawnar
 
 
-    //Garante que a instancia é unica, tornando o script em um companion object
+    //Garante que a instancia ï¿½ unica, tornando o script em um companion object
     private void Awake()
     {
         if (instanciaCompartilhada != null && instanciaCompartilhada != this)

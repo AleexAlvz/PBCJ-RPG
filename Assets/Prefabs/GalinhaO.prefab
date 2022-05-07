@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4971070178026306220, guid: a955b9c36a2e4304e9e049b880313de2, type: 3}
       propertyPath: forcaDano
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4971070178026306220, guid: a955b9c36a2e4304e9e049b880313de2, type: 3}
       propertyPath: MaxPontosDano

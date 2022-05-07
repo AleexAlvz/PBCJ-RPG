@@ -306,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: prefabParaSpawn
       value: 
-      objectReference: {fileID: 7215114078261321565, guid: a955b9c36a2e4304e9e049b880313de2, type: 3}
+      objectReference: {fileID: 5742413752508483790, guid: 3417aeef9d44b5849aabb42590baf695, type: 3}
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: intervaloRepeticao
       value: 15
@@ -52552,7 +52552,7 @@ PrefabInstance:
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: prefabParaSpawn
       value: 
-      objectReference: {fileID: 7215114078261321565, guid: a955b9c36a2e4304e9e049b880313de2, type: 3}
+      objectReference: {fileID: 5742413752508483790, guid: 3417aeef9d44b5849aabb42590baf695, type: 3}
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: intervaloRepeticao
       value: 15
@@ -52617,7 +52617,7 @@ PrefabInstance:
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: prefabParaSpawn
       value: 
-      objectReference: {fileID: 7215114078261321565, guid: a955b9c36a2e4304e9e049b880313de2, type: 3}
+      objectReference: {fileID: 5742413752508483790, guid: 3417aeef9d44b5849aabb42590baf695, type: 3}
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: intervaloRepeticao
       value: 15
@@ -52894,7 +52894,7 @@ GameObject:
   - component: {fileID: 1038011876}
   - component: {fileID: 1038011875}
   - component: {fileID: 1038011874}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FimFase2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53036,7 +53036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 443742141}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &1108178925
@@ -53147,7 +53147,7 @@ PrefabInstance:
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: prefabParaSpawn
       value: 
-      objectReference: {fileID: 7215114078261321565, guid: a955b9c36a2e4304e9e049b880313de2, type: 3}
+      objectReference: {fileID: 5742413752508483790, guid: 3417aeef9d44b5849aabb42590baf695, type: 3}
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: intervaloRepeticao
       value: 15
@@ -53361,7 +53361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3777346169480645087, guid: e7bc7f19f0622484fb105b04b4b775ff, type: 3}
       propertyPath: m_TagString
-      value: Virtual Camera
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5788539972346594215, guid: e7bc7f19f0622484fb105b04b4b775ff, type: 3}
       propertyPath: m_RootOrder
@@ -58153,7 +58153,7 @@ PrefabInstance:
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: prefabParaSpawn
       value: 
-      objectReference: {fileID: 7215114078261321565, guid: a955b9c36a2e4304e9e049b880313de2, type: 3}
+      objectReference: {fileID: 5742413752508483790, guid: 3417aeef9d44b5849aabb42590baf695, type: 3}
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: intervaloRepeticao
       value: 15
@@ -58218,7 +58218,7 @@ PrefabInstance:
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: prefabParaSpawn
       value: 
-      objectReference: {fileID: 7215114078261321565, guid: a955b9c36a2e4304e9e049b880313de2, type: 3}
+      objectReference: {fileID: 5742413752508483790, guid: 3417aeef9d44b5849aabb42590baf695, type: 3}
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: intervaloRepeticao
       value: 15
@@ -58283,7 +58283,7 @@ PrefabInstance:
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: prefabParaSpawn
       value: 
-      objectReference: {fileID: 7215114078261321565, guid: a955b9c36a2e4304e9e049b880313de2, type: 3}
+      objectReference: {fileID: 5742413752508483790, guid: 3417aeef9d44b5849aabb42590baf695, type: 3}
     - target: {fileID: 5281353166729168676, guid: 6194d111a4ed2784d8a480b949c980f9, type: 3}
       propertyPath: intervaloRepeticao
       value: 15
